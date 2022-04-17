@@ -1,2 +1,2 @@
 # TDD
-TDD practive project
+TDD practice project
