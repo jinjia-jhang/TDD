@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Coding-DOJO", "Coding-DOJO\Coding-DOJO.csproj", "{AA37678C-8116-4FA7-9FA9-B72F8CF004E9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Coding-DOJO", "Coding-DOJO\Coding-DOJO.csproj", "{2CFD61EF-299A-4896-8132-C7ADF27FA127}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Coding-DOJO.Tests", "Coding-DOJO.Tests\Coding-DOJO.Tests.csproj", "{10CECA71-3486-47C3-8E1B-825BA95B049D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -14,10 +16,14 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{AA37678C-8116-4FA7-9FA9-B72F8CF004E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AA37678C-8116-4FA7-9FA9-B72F8CF004E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AA37678C-8116-4FA7-9FA9-B72F8CF004E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AA37678C-8116-4FA7-9FA9-B72F8CF004E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CFD61EF-299A-4896-8132-C7ADF27FA127}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CFD61EF-299A-4896-8132-C7ADF27FA127}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CFD61EF-299A-4896-8132-C7ADF27FA127}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CFD61EF-299A-4896-8132-C7ADF27FA127}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10CECA71-3486-47C3-8E1B-825BA95B049D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10CECA71-3486-47C3-8E1B-825BA95B049D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10CECA71-3486-47C3-8E1B-825BA95B049D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10CECA71-3486-47C3-8E1B-825BA95B049D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection
