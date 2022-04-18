@@ -7,7 +7,7 @@ public class CalculateService
         if ((number % 3 == 0 && number % 5 == 0) || (number.ToString().Contains("3") && number.ToString().Contains("5"))) return "FizzBuzz";
         if (number % 3 == 0 || number.ToString().Contains("3")) return "Fizz";
         if (number % 5 == 0 || number.ToString().Contains("5")) return "Buzz";
-        if (number % 7 == 0) return "Whizz";    
+        if (number % 7 == 0 || number.ToString().Contains("7")) return "Whizz";    
         
         return number.ToString();
     }
