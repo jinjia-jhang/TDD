@@ -44,4 +44,13 @@ public class Tests
 
         Assert.AreEqual("2", actual);
     }
+    
+    [Test]
+    public void methodsName_input13_Fizz()
+    {
+        var number = 13;
+        var actual = _calculateService.ReplaceNumber(number);
+
+        Assert.AreEqual("Fizz", actual);
+    }
 }
