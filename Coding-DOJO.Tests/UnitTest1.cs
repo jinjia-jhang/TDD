@@ -99,5 +99,13 @@ public class Tests
         Assert.AreEqual("Whizz", actual);
     }
     
+    [Test]
+    public void methodsName_input21_FizzWhizz()
+    {
+        var number = 21;
+        var actual = _calculateService.ReplaceNumber(number);
+        
+        Assert.AreEqual("FizzWhizz", actual);
+    }
     
 }
