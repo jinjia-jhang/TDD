@@ -12,7 +12,7 @@ public class Tests
     }
 
     [Test]
-    public void methodsName_input3_Fizz()
+    public void ReplaceNumber_input3_Fizz()
     {
         var number = 3;
         var actual = _calculateService.ReplaceNumber(number);
@@ -20,7 +20,7 @@ public class Tests
         Assert.AreEqual("Fizz", actual);
     }
     [Test]
-    public void methodsName_input5_Buzz()
+    public void ReplaceNumber_input5_Buzz()
     {
         var number = 5;
         var actual = _calculateService.ReplaceNumber(number);
@@ -28,7 +28,7 @@ public class Tests
         Assert.AreEqual("Buzz", actual);
     }
     [Test]
-    public void methodsName_input15_FizzBuzz()
+    public void ReplaceNumber_input15_FizzBuzz()
     {
         var number = 15;
         var actual = _calculateService.ReplaceNumber(number);
@@ -37,7 +37,7 @@ public class Tests
     }
     
     [Test]
-    public void methodsName_input2_2()
+    public void ReplaceNumber_input2_2()
     {
         var number = 2;
         var actual = _calculateService.ReplaceNumber(number);
@@ -46,7 +46,7 @@ public class Tests
     }
     
     [Test]
-    public void methodsName_input13_Fizz()
+    public void ReplaceNumber_input13_Fizz()
     {
         var number = 13;
         var actual = _calculateService.ReplaceNumber(number);
@@ -55,7 +55,7 @@ public class Tests
     }
     
     [Test]
-    public void methodsName_input52_Buzz()
+    public void ReplaceNumber_input52_Buzz()
     {
         var number = 52;
         var actual = _calculateService.ReplaceNumber(number);
@@ -64,7 +64,7 @@ public class Tests
     }
     
     [Test]
-    public void methodsName_input35_FizzBuzzWhizz()
+    public void ReplaceNumber_input35_FizzBuzzWhizz()
     {
         var number = 35;
         var actual = _calculateService.ReplaceNumber(number);
@@ -73,7 +73,7 @@ public class Tests
     }
     
     [Test]
-    public void methodsName_input53_FizzBuzz()
+    public void ReplaceNumber_input53_FizzBuzz()
     {
         var number = 53;
         var actual = _calculateService.ReplaceNumber(number);
@@ -82,7 +82,7 @@ public class Tests
     }
     
     [Test]
-    public void methodsName_input7_Whizz()
+    public void ReplaceNumber_input7_Whizz()
     {
         var number = 7;
         var actual = _calculateService.ReplaceNumber(number);
@@ -91,7 +91,7 @@ public class Tests
     }
     
     [Test]
-    public void methodsName_input17_Whizz()
+    public void ReplaceNumber_input17_Whizz()
     {
         var number = 17;
         var actual = _calculateService.ReplaceNumber(number);
@@ -100,7 +100,7 @@ public class Tests
     }
     
     [Test]
-    public void methodsName_input21_FizzWhizz()
+    public void ReplaceNumber_input21_FizzWhizz()
     {
         var number = 21;
         var actual = _calculateService.ReplaceNumber(number);
