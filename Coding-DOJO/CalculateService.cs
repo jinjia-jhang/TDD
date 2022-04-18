@@ -4,36 +4,28 @@ public class CalculateService
 {
     public string ReplaceNumber(int number)
     {
-        if (ContainsAndDivide_3(number) && ContainsAndDivide_5(number) && ContainsAndDivide_7(number))
-        if (ContainsAndDivide_3(number) && ContainsAndDivide_5(number) && ContainsAndDivide_7(number))
+        if (ContainsAndDivide(number, 3) && ContainsAndDivide(number, 5) && ContainsAndDivide(number, 7))
            return "FizzBuzzWhizz";
         
-        if ((number % 3 == 0 && number % 5 == 0) || (number.ToString().Contains("3") && number.ToString().Contains("5"))) return "FizzBuzz";
-        if (ContainsAndDivide_3(number)  && (number % 7 == 0 || number.ToString().Contains("7"))) 
+        if (IsDevideNumber(number, 3) && IsDevideNumber(number, 5) || IsContainsNumber(number, 3) && IsContainsNumber(number, 5)) return "FizzBuzz";
+        if (ContainsAndDivide(number, 3)  && ContainsAndDivide(number, 7)) 
             return "FizzWhizz";
-        if (ContainsAndDivide_3(number)) return "Fizz";
-        if (ContainsAndDivide_5(number) ) return "Buzz";
-        if (ContainsAndDivide_7(number)) return "Whizz";    
+        
+        if (ContainsAndDivide(number, 3)) return "Fizz";
+        if (ContainsAndDivide(number, 5)) return "Buzz";
+        if (ContainsAndDivide(number, 7)) return "Whizz";    
         
         return number.ToString();
     }
 
-    private static bool ContainsAndDivide_7(int number)
+    private static bool ContainsAndDivide(int number, int divisionNum)
     {
-        var divisionNum = 7;
-        return (IsDevideNumber(number, divisionNum) || number.ToString().Contains(divisionNum.ToString()));
+        return IsDevideNumber(number, divisionNum) || IsContainsNumber(number, divisionNum);
     }
 
-    private static bool ContainsAndDivide_5(int number)
+    private static bool IsContainsNumber(int number, int containsNum)
     {
-        var divisionNum = 5;
-        return (IsDevideNumber(number, divisionNum) || number.ToString().Contains(divisionNum.ToString()));
-    }
-
-    private static bool ContainsAndDivide_3(int number)
-    {
-        var divisionNum = 3;
-        return IsDevideNumber(number, divisionNum) || number.ToString().Contains(divisionNum.ToString());
+        return number.ToString().Contains(containsNum.ToString());
     }
 
     private static bool IsDevideNumber(int number, int divisionNum)
