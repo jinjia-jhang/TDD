@@ -64,12 +64,12 @@ public class Tests
     }
     
     [Test]
-    public void methodsName_input35_FizzBuzz()
+    public void methodsName_input35_FizzBuzzWhizz()
     {
         var number = 35;
         var actual = _calculateService.ReplaceNumber(number);
 
-        Assert.AreEqual("FizzBuzz", actual);
+        Assert.AreEqual("FizzBuzzWhizz", actual);
     }
     
     [Test]
@@ -107,5 +107,4 @@ public class Tests
         
         Assert.AreEqual("FizzWhizz", actual);
     }
-    
 }
