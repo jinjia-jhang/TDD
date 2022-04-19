@@ -2,8 +2,34 @@
 
 public class CalculateService
 {
+    private readonly Dictionary<int, string> _configuration;
+    
+    public CalculateService()
+    {
+        
+    }
+    
+    public CalculateService(Dictionary<int,string> configuration)
+    {
+        _configuration = configuration;
+    }
+
     public string ReplaceNumber(int number)
     {
+        if (_configuration != null)
+        {
+            var str = "";
+            foreach (var (keyNum, replaceStr) in _configuration)
+            {
+                if (ContainsAndDivide(number, keyNum))
+                {
+                    str = str + replaceStr;
+                }
+            }
+
+            return str;
+        }
+        
         if (ContainsAndDivide(number, 3) && ContainsAndDivide(number, 5) && ContainsAndDivide(number, 7))
            return "FizzBuzzWhizz";
         

@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using NUnit.Framework;
 
 namespace Coding_DOJO.Tests;
@@ -106,5 +108,21 @@ public class Tests
         var actual = _calculateService.ReplaceNumber(number);
         
         Assert.AreEqual("FizzWhizz", actual);
+    }
+    
+    [Test]
+    public void ReplaceNumber_useConfigurationInput4_Gozz()
+    {
+        var configuration = new Dictionary<int, string>()
+        {
+            {4, "Gozz"},
+            {6, "Rozz"}
+        };
+        var number = 4;
+        
+        var service = new CalculateService(configuration);
+        var actual = service.ReplaceNumber(4);
+        
+        Assert.AreEqual("Gozz", actual);
     }
 }
