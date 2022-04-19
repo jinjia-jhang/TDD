@@ -1,4 +1,6 @@
-﻿namespace Coding_DOJO;
+﻿using System.Collections;
+
+namespace Coding_DOJO;
 
 public class CalculateService
 {
@@ -6,7 +8,12 @@ public class CalculateService
     
     public CalculateService()
     {
-        
+        _configuration = new Dictionary<int, string>()
+        {
+            {3, "Fizz"},
+            {5, "Buzz"},
+            {7, "Whizz"}
+        };
     }
     
     public CalculateService(Dictionary<int,string> configuration)
@@ -16,34 +23,18 @@ public class CalculateService
 
     public string ReplaceNumber(int number)
     {
-        if (_configuration != null)
+        var str = string.Empty;
+        foreach (var (keyNum, replaceStr) in _configuration)
         {
-            var str = string.Empty;
-            foreach (var (keyNum, replaceStr) in _configuration)
+            if (ContainsAndDivide(number, keyNum))
             {
-                if (ContainsAndDivide(number, keyNum))
-                {
-                    str = str + replaceStr;
-                }
+                str += replaceStr;
             }
-
-            if (str == string.Empty) str = number.ToString();
-            
-            return str;
         }
+
+        if (str == string.Empty) str = number.ToString();
         
-        if (ContainsAndDivide(number, 3) && ContainsAndDivide(number, 5) && ContainsAndDivide(number, 7))
-           return "FizzBuzzWhizz";
-        
-        if (IsDevideNumber(number, 3) && IsDevideNumber(number, 5) || IsContainsNumber(number, 3) && IsContainsNumber(number, 5)) return "FizzBuzz";
-        if (ContainsAndDivide(number, 3)  && ContainsAndDivide(number, 7)) 
-            return "FizzWhizz";
-        
-        if (ContainsAndDivide(number, 3)) return "Fizz";
-        if (ContainsAndDivide(number, 5)) return "Buzz";
-        if (ContainsAndDivide(number, 7)) return "Whizz";    
-        
-        return number.ToString();
+        return str;
     }
 
     private static bool ContainsAndDivide(int number, int divisionNum)
@@ -57,7 +48,7 @@ public class CalculateService
     }
 
     private static bool IsDevideNumber(int number, int divisionNum)
-    {
+{
         return number % divisionNum == 0;
     }
 }
