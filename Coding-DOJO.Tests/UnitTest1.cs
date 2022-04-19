@@ -197,4 +197,24 @@ public class Tests
         
         Assert.AreEqual("FizzRozz", actual);
     }
+    
+    [Test]
+    public void ReplaceNumber_useConfigurationExample2Input12_FizzGozzRozz()
+    {
+        var configuration = new Dictionary<int, string>()
+        {
+            {3, "Fizz"},
+            {4, "Gozz"},
+            {5, "Buzz"},
+            {6, "Rozz"},
+            {7, "Whizz"}
+        };
+        
+        var number = 12;
+        
+        var service = new CalculateService(configuration);
+        var actual = service.ReplaceNumber(number);
+        
+        Assert.AreEqual("FizzGozzRozz", actual);
+    }
 }
