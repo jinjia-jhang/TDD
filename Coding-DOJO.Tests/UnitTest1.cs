@@ -137,8 +137,25 @@ public class Tests
         var number = 5;
         
         var service = new CalculateService(configuration);
-        var actual = service.ReplaceNumber(5);
+        var actual = service.ReplaceNumber(number);
         
         Assert.AreEqual("5", actual);
     }
+    
+    [Test]
+    public void ReplaceNumber_useConfigurationInput12_GozzRozz()
+    {
+        var configuration = new Dictionary<int, string>()
+        {
+            {4, "Gozz"},
+            {6, "Rozz"}
+        };
+        var number = 12;
+        
+        var service = new CalculateService(configuration);
+        var actual = service.ReplaceNumber(number);
+        
+        Assert.AreEqual("GozzRozz", actual);
+    }
+    
 }
