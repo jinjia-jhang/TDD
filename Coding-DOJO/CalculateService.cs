@@ -18,7 +18,7 @@ public class CalculateService
     {
         if (_configuration != null)
         {
-            var str = "";
+            var str = string.Empty;
             foreach (var (keyNum, replaceStr) in _configuration)
             {
                 if (ContainsAndDivide(number, keyNum))
@@ -27,6 +27,8 @@ public class CalculateService
                 }
             }
 
+            if (str == string.Empty) str = number.ToString();
+            
             return str;
         }
         
